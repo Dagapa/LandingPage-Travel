@@ -17,12 +17,12 @@ const rootReducer = (
     case GET_GAMES:
       return {
         ...state,
-        games: [...state.games, payload],
+        games: payload,
       };
     case GET_TOPGAMES:
       return {
         ...state,
-        topGames: [...state.topGames, payload],
+        topGames: payload,
       };
     default:
       return {
