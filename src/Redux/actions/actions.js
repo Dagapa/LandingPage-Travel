@@ -2,10 +2,7 @@
 import axios from 'axios';
 
 // ? importacion de los types
-import {
-  GET_GAMES,
-  GET_TOPGAMES,
-} from './types.js';
+import { GET_GAMES, GET_TOPGAMES, RENDER_GAMES } from './types.js';
 
 // ^ configuracion de axios
 // ! IMPORTANTE toca cambiar estos datos para el .ENV
@@ -13,10 +10,8 @@ const options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
   headers: {
-    'X-RapidAPI-Key':
-      'd276d8c624mshcbbfcc7e1b7f610p1ebcc9jsnaf4333d5659f',
-    'X-RapidAPI-Host':
-      'free-to-play-games-database.p.rapidapi.com',
+    'X-RapidAPI-Key': 'd276d8c624mshcbbfcc7e1b7f610p1ebcc9jsnaf4333d5659f',
+    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
   },
 };
 const options2 = {
@@ -24,34 +19,27 @@ const options2 = {
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
   params: { 'sort-by': 'popularity' },
   headers: {
-    'X-RapidAPI-Key':
-      'd276d8c624mshcbbfcc7e1b7f610p1ebcc9jsnaf4333d5659f',
-    'X-RapidAPI-Host':
-      'free-to-play-games-database.p.rapidapi.com',
+    'X-RapidAPI-Key': 'd276d8c624mshcbbfcc7e1b7f610p1ebcc9jsnaf4333d5659f',
+    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
   },
 };
 
 export const getGames = () => {
-  return async function (dispatch) {
-    console.log('💻 -> dispatch se repite');
-    setTimeout(() => {
-      axios
-        .request(options)
-        .then((response) => {
-          return dispatch({
-            type: GET_GAMES,
-            payload: response.data,
-          });
-        })
-        .catch(function (er) {
-          return dispatch({
-            type: GET_GAMES,
-            payload: [
-              'error al cargar los Juegos...',
-            ],
-          });
+  return async function  (dispatch) {
+    axios
+      .request(options)
+      .then((response) => {
+        return dispatch({
+          type: GET_GAMES,
+          payload: response.data,
         });
-    }, 10000);
+      })
+      .catch(function (er) {
+        return dispatch({
+          type: GET_GAMES,
+          payload: ['error al cargar los Juegos...'],
+        });
+      });
   };
 };
 
@@ -66,9 +54,14 @@ export const getTopGames = () => {
         });
       })
       .catch(function (er) {
-        alert(
-          'Problema Con el Servidor, intenta mas tarde.'
-        );
+        alert('Problema Con el Servidor, intenta mas tarde.');
       });
   };
 };
+
+export const renderGames = (games) => {
+  return {
+    type: RENDER_GAMES,
+    payload: games,
+  };
+}

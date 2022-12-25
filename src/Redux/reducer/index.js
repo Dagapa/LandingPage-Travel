@@ -2,11 +2,13 @@
 import {
   GET_GAMES,
   GET_TOPGAMES,
+  RENDER_GAMES
 } from '../actions/types.js';
 
 const initialState = {
   games: [],
   topGames: [],
+  renderGames: [],
 };
 
 const rootReducer = (
@@ -24,7 +26,12 @@ const rootReducer = (
         ...state,
         topGames: payload,
       };
-    default:
+    case RENDER_GAMES:
+      return{
+        ...state,
+        RENDER_GAMES: payload,
+      }
+      default:
       return {
         games: [],
         topGames: [],
