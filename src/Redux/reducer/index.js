@@ -22,7 +22,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
     case RENDER_GAMES:
       return {
         ...state,
-        RENDER_GAMES: payload,
+        renderGames: payload, // ! error de propiedad
       };
     default:
       return {
