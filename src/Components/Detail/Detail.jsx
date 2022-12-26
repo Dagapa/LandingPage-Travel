@@ -21,6 +21,7 @@ export default function Detail() {
 
   return (
     <>
+      <h1>{detalle?.title}</h1>
       <h1>putas</h1>
     </>
   );
