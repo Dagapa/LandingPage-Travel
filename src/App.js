@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 // Components
 import About from './Components/About/About.jsx';
 import TopGames from './Components/TopGames/TopGames.jsx';
+import Detail from './Components/Detail/Detail.jsx';
 import CardsGames from './Components/CardsGames/CardsGames.jsx';
 import Landing from './Components/Landing/Landing';
 // animations Scroll
@@ -37,6 +38,7 @@ function App() {
       <Routes>
         <Route exact path='/about' element={<About />} />
         <Route exact path='/topgames' element={<TopGames />} />
+        <Route exact path='/Detail/:id' element={<Detail />} />
         <Route
           exact
           path='/pruebaGamesTemp' // TODO: uso temporal

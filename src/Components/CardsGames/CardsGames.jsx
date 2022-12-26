@@ -13,7 +13,7 @@ import './CardsGames.css';
 class CardsGames extends Component {
   state = { isLoading: true, gamesRender: [] };
 
-  // 
+  //
   UNSAFE_componentWillMount() {
     if (this.props.allGames.length > 0) this.setState({ isLoading: false });
   }
