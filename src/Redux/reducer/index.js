@@ -4,7 +4,7 @@ import {
   GET_TOPGAMES,
   GET_DETAIL,
   RENDER_GAMES,
-} from '../actions/actions.js';
+} from '../actions/types.js';
 
 const initialState = {
   games: [],
