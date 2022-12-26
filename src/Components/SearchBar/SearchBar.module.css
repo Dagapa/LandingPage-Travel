@@ -11,7 +11,6 @@
   padding-right: 63px;
   padding-bottom: 24px;
   padding-top: 24px;
-
 }
 .Categoria {
   width: 179px;
@@ -34,7 +33,7 @@
   padding-right: 20px;
 }
 .lupa {
-    height: 30px;
+  height: 30px;
 }
 .Search {
   background-color: #ffffff;
@@ -44,5 +43,5 @@
   display: flex;
 }
 .input:focus {
-   outline: 0;
-  }
+  outline: 0;
+}

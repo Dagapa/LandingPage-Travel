@@ -41,7 +41,7 @@ export const getGames = () => {
           type: GET_GAMES,
           payload: ['error al cargar los Juegos...'],
         });
-    }, 10000);
+      }, 10000);
   };
 };
 
@@ -66,4 +66,4 @@ export const renderGames = (games) => {
     type: RENDER_GAMES,
     payload: games,
   };
-}
+};

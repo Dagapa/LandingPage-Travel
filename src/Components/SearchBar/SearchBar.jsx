@@ -1,17 +1,15 @@
 import { useState } from 'react';
 import Categories from '../Categories/Categories';
 import Styles from './SearchBar.module.css';
-import { useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../../Redux/actions/actions';
-
 
 const placeholder = ['hola', 'genero1', 'moba', 'shooter'];
 
 export default function SearchBar() {
-
   const [Desplegado, setDesplegado] = useState(false);
   const [input, setInput] = useState('');
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const Desplegar = () => {
     if (Desplegado === false) {
@@ -20,21 +18,21 @@ export default function SearchBar() {
       setDesplegado(false);
     }
   };
-  const estado = useSelector((state)=>state.games)
-  const Buscar =()=>{
-    const encontrados= []
-    
+  const estado = useSelector((state) => state.games);
+  const Buscar = () => {
+    const encontrados = [];
+
     estado.forEach((element) => {
-      if (element.title.toLowerCase().includes(input)){
-        encontrados.push(element)
+      if (element.title.toLowerCase().includes(input)) {
+        encontrados.push(element);
       }
     });
-    if (encontrados.length===0) {
-      alert("No se enecontraron juegos")
-    }else{
-      dispatch(actions.renderGames(encontrados))
+    if (encontrados.length === 0) {
+      alert('No se enecontraron juegos');
+    } else {
+      dispatch(actions.renderGames(encontrados));
     }
-    setInput("")
+    setInput('');
   };
 
   return (
