@@ -14,6 +14,16 @@
   src: url('./assets/font/Poppins-Bold.ttf');
 }
 
+@font-face {
+  font-family: Poppins-semiBold;
+  src: url('./assets/font/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-lightItalic;
+  src: url('./assets/font/Poppins-LightItalic.ttf');
+}
+
 /* ---------------------------- */
 
 body {
@@ -23,6 +33,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco,
-    Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
