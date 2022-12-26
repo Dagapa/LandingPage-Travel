@@ -1,3 +1,31 @@
+/* TIPOGRAFIA GLOBALES */
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('./assets/font/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('./assets/font/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('./assets/font/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-semiBold;
+  src: url('./assets/font/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-lightItalic;
+  src: url('./assets/font/Poppins-LightItalic.ttf');
+}
+
+/* ---------------------------- */
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +33,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco,
-    Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

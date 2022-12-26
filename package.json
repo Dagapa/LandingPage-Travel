@@ -9,7 +9,7 @@
     "eject": "react-scripts eject",
     "format": "npx prettier --write .",
     "check-format": "npx prettier --check .",
-    "lint": "eslint --fix . --ext .js,.jsx"
+    "lint": "npx eslint --fix . --ext .js,.jsx"
   },
   "eslintConfig": {
     "extends": [

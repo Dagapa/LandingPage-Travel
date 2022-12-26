@@ -1,18 +1,13 @@
 // * importacion de los types.js
-import {
-  GET_GAMES,
-  GET_TOPGAMES,
-} from '../actions/types.js';
+import { GET_GAMES, GET_TOPGAMES, RENDER_GAMES } from '../actions/types.js';
 
 const initialState = {
   games: [],
   topGames: [],
+  renderGames: [],
 };
 
-const rootReducer = (
-  state = initialState,
-  { type, payload }
-) => {
+const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case GET_GAMES:
       return {
@@ -23,6 +18,11 @@ const rootReducer = (
       return {
         ...state,
         topGames: payload,
+      };
+    case RENDER_GAMES:
+      return {
+        ...state,
+        renderGames: payload, // ! error de propiedad
       };
     default:
       return {
