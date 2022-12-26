@@ -1,9 +1,14 @@
 // * importacion de los types.js
-import { GET_GAMES, GET_TOPGAMES } from '../actions/types.js';
+import {
+  GET_GAMES,
+  GET_TOPGAMES,
+  RENDER_GAMES
+} from '../actions/types.js';
 
 const initialState = {
   games: [],
   topGames: [],
+  renderGames: [],
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -18,7 +23,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
         ...state,
         topGames: payload,
       };
-    default:
+    case RENDER_GAMES:
+      return{
+        ...state,
+        RENDER_GAMES: payload,
+      }
+      default:
       return {
         games: [],
         topGames: [],

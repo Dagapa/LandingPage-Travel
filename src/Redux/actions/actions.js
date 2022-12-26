@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // ? importacion de los types
-import { GET_GAMES, GET_TOPGAMES } from './types.js';
+import { GET_GAMES, GET_TOPGAMES, RENDER_GAMES } from './types.js';
 
 // ^ configuracion de axios
 // ! IMPORTANTE toca cambiar estos datos para el .ENV
@@ -41,7 +41,7 @@ export const getGames = () => {
           type: GET_GAMES,
           payload: ['error al cargar los Juegos...'],
         });
-      });
+    }, 10000);
   };
 };
 
@@ -60,3 +60,10 @@ export const getTopGames = () => {
       });
   };
 };
+
+export const renderGames = (games) => {
+  return {
+    type: RENDER_GAMES,
+    payload: games,
+  };
+}
