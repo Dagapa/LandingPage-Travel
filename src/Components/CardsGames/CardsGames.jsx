@@ -2,7 +2,7 @@
 import CardGame from '../CardGame/CardGame.jsx';
 import Loading from '../Loading/Loading.jsx';
 // * Hooks de react redux
-import { connect, useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 // * action de redux
 import { Component } from 'react';
 // * libreria encargada de validar los datos
@@ -13,14 +13,20 @@ import './CardsGames.css';
 class CardsGames extends Component {
   state = { isLoading: true, gamesRender: [] };
 
+  // 
   UNSAFE_componentWillMount() {
     if (this.props.allGames.length > 0) this.setState({ isLoading: false });
   }
 
+  // executed immediately after the component receives new properties
+  // I wonder if the previous "props.allGames" changed or was updated.
+  // if it arrives empty, it will stay on the loading screen
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.allGames.length > 0) this.setState({ isLoading: false });
   }
 
+  // pregunta si el "state.rendergames" anterior es diferente al nuevo
+  // si lo es, entonces actualiza el "state.gamesRender"
   componentDidUpdate(prevProps) {
     if (prevProps.render !== this.props.render)
       this.setState({ ...this.state, gamesRender: this.props.render });
@@ -32,6 +38,8 @@ class CardsGames extends Component {
     let gamesShow;
     if (this.state.gamesRender.length > 0) gamesShow = this.state.gamesRender;
     else gamesShow = this.props.allGames.slice(1, 15);
+
+    console.log('💻 -> CardsGames -> render -> gamesShow', gamesShow);
 
     return (
       <div className='containerGames'>
