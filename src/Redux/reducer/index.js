@@ -29,7 +29,7 @@ const rootReducer = (
     case RENDER_GAMES:
       return{
         ...state,
-        RENDER_GAMES: payload,
+        renderGames: payload,
       }
       default:
       return {

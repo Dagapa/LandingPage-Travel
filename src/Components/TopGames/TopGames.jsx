@@ -1,3 +1,3 @@
 export default function TopGames(){
-  return <></>
+  return <h1>cambio temporar</h1>
 }
