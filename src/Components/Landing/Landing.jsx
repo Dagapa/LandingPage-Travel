@@ -1,5 +1,6 @@
 import SearchBar from '../SearchBar/SearchBar';
 import CardsGames from '../CardsGames/CardsGames';
+import TopGames from '../TopGames/TopGames'
 import * as actions from '../../Redux/actions/actions';
 import styles from './Landing.module.css';
 import { useEffect } from 'react';
@@ -14,8 +15,15 @@ export default function Landing() {
 
   return (
     <>
-      <div className={styles.banner}>Banner aca</div>
-      <SearchBar />
+      <div className={styles.container}>
+        <div className={styles.banner}>Banner aca</div>
+        <div className={styles.searchBar}>
+          <SearchBar />
+        </div>
+      </div>
+      <div className={styles.topGames}>
+        <TopGames/>
+      </div>
       <CardsGames />
     </>
   );

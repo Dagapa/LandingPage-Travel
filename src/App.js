@@ -1,12 +1,13 @@
 // css
 import './App.css';
+
 // Routing
 import { Routes, Route } from 'react-router-dom';
 // Components
 import About from './Components/About/About.jsx';
 import TopGames from './Components/TopGames/TopGames.jsx';
-import CardsGames from './Components/CardsGames/CardsGames.jsx';
 import Landing from './Components/Landing/Landing';
+import CardsGames from './Components/CardsGames/CardsGames.jsx';
 // animations Scroll
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -35,8 +36,9 @@ function App() {
 
   return (
     <div className='App'>
-      <NavBar>
+      
         <Routes>
+          
           <Route exact path='/nav' element={<NavBar />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/topgames' element={<TopGames />} />
@@ -52,7 +54,7 @@ function App() {
           />
           <Route exact path='/' element={<Landing />} />
         </Routes>
-      </NavBar>
+        
     </div>
   );
 }
