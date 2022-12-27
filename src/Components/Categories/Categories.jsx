@@ -5,7 +5,7 @@ export default function Categories(props) {
   return (
     <div className={styles.container}>
       {cartas.map((generes, index) => (
-        <div className={styles.gener} key={index}><p>{generes}</p></div>
+        <div className={styles.gener} key={index}><p className={styles.generes}>{generes}</p></div>
       ))}
     </div>
   );
