@@ -1,0 +1,12 @@
+.titulos {
+  color: red;
+  background-color: aqua;
+}
+
+.contenedor {
+  width: 100%;
+  display: flex;
+  max-width: 1100px;
+  text-align: center;
+  columns: auto;
+}
