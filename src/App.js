@@ -8,7 +8,6 @@ import About from './Components/About/About.jsx';
 import TopGames from './Components/TopGames/TopGames.jsx';
 import Landing from './Components/Landing/Landing';
 import CardsGames from './Components/CardsGames/CardsGames.jsx';
-import Landing from './Components/Landing/Landing';
 // animations Scroll
 import AOS from 'aos';
 import 'aos/dist/aos.css';
