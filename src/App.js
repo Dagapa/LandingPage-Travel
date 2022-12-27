@@ -36,8 +36,9 @@ function App() {
 
   return (
     <div className='App'>
-      <NavBar>
+      
         <Routes>
+          
           <Route exact path='/nav' element={<NavBar />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/topgames' element={<TopGames />} />
@@ -53,7 +54,7 @@ function App() {
           />
           <Route exact path='/' element={<Landing />} />
         </Routes>
-      </NavBar>
+        
     </div>
   );
 }
