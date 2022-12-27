@@ -1,0 +1,108 @@
+/* .containerGames {
+  width: 100%;
+  background-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+} */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .containerTop {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .containerGamesTop {
+    background-color: #323232;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+  .containerInfoMobile {
+    background-color: #323232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .containerInfoMobile h1 {
+    color: #ffffff;
+    font-family: Poppins-semiBold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 18px;
+    letter-spacing: 0.125em;
+    margin-left: 10px;
+  }
+
+  .containerInfoMobile button {
+    color: #e3e3e3;
+    font-size: 1rem;
+    outline: none;
+    border-style: none;
+    background-color: #323232;
+    font-family: Poppins-lightItalic;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.125em;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+
+  .containerInfoMobile button:active {
+    color: #323232;
+    background-color: #e3e3e3;
+  }
+
+  .containerGamesTopActive {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .containerGamesTop {
+    width: 100%;
+    background-color: #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .containerInfoMobile {
+    display: none;
+    visibility: none;
+  }
+}

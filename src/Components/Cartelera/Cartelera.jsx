@@ -5,7 +5,9 @@ import styles from './Cartelera.module.css';
 export default function Cartelera(props) {
   console.log(props);
   // Estado para controlar la imagen actual
-  const [currentScreenshot, setCurrentScreenshot] = useState(null);
+  const [currentScreenshot, setCurrentScreenshot] = useState(
+    props.screenshots[1]
+  );
 
   // Cambiar la imagen cada 5 segundos
   useEffect(() => {
@@ -23,7 +25,7 @@ export default function Cartelera(props) {
 
       // Cambiar la imagen actual en el estado
       setCurrentScreenshot(props.screenshots[currentScreenshotIndex]);
-    }, 3000);
+    }, 1250);
 
     // Limpiar el intervalo cuando el componente se desmonte
     return () => clearInterval(interval);
