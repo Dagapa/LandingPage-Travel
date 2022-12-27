@@ -14,6 +14,8 @@ const options = {
     'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
   },
 };
+
+// release-date, popularity, alphabetical or relevance
 const options2 = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
@@ -25,7 +27,7 @@ const options2 = {
 };
 
 export const getGames = () => {
-  return async function  (dispatch) {
+  return async function (dispatch) {
     axios
       .request(options)
       .then((response) => {
@@ -39,12 +41,12 @@ export const getGames = () => {
           type: GET_GAMES,
           payload: ['error al cargar los Juegos...'],
         });
-      });
+      }, 10000);
   };
 };
 
 export const getTopGames = () => {
-  return async function (dispatch) {
+  return function (dispatch) {
     axios
       .request(options2)
       .then((response) => {
@@ -64,4 +66,4 @@ export const renderGames = (games) => {
     type: RENDER_GAMES,
     payload: games,
   };
-}
+};

@@ -3,21 +3,18 @@ import './App.css';
 
 // Routing
 import { Routes, Route } from 'react-router-dom';
-
 // Components
 import About from './Components/About/About.jsx';
 import TopGames from './Components/TopGames/TopGames.jsx';
 import Landing from './Components/Landing/Landing';
 import CardsGames from './Components/CardsGames/CardsGames.jsx';
-
+import Landing from './Components/Landing/Landing';
 // animations Scroll
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 // Hooks
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
 // actions
 import { getGames, getTopGames } from './Redux/actions/actions';
 
@@ -56,6 +53,7 @@ function App() {
         exact path='/' 
         element={<Landing/>}
         />
+        <Route exact path='/' element={<Landing />} />
       </Routes>
     </div>
   );
