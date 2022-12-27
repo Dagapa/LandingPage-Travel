@@ -16,6 +16,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 // actions
 import { getGames, getTopGames } from './Redux/actions/actions';
+import { NavBar } from './Components/NavBar/NavBar';
 
 function App() {
   // start dispatch for games and topGames
@@ -35,25 +36,24 @@ function App() {
 
   return (
     <div className='App'>
-      <Routes>
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/topgames' element={<TopGames />} />
-        <Route
-          exact
-          path='/pruebaGamesTemp' // TODO: uso temporal
-          element={<CardsGames />}
-        />
-        <Route
-          exact
-          path='/pruebaTopsGamesTemp' // TODO: uso temporal
-          element={<TopGames />}
-        />
-        <Route 
-        exact path='/' 
-        element={<Landing/>}
-        />
-        <Route exact path='/' element={<Landing />} />
-      </Routes>
+      <NavBar>
+        <Routes>
+          <Route exact path='/nav' element={<NavBar />} />
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/topgames' element={<TopGames />} />
+          <Route
+            exact
+            path='/pruebaGamesTemp' // TODO: uso temporal
+            element={<CardsGames />}
+          />
+          <Route
+            exact
+            path='/pruebaTopsGamesTemp' // TODO: uso temporal
+            element={<TopGames />}
+          />
+          <Route exact path='/' element={<Landing />} />
+        </Routes>
+      </NavBar>
     </div>
   );
 }
