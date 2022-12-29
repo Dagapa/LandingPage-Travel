@@ -16,7 +16,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 // actions
 import { getGames, getTopGames } from './Redux/actions/actions';
-import { NavBar } from './Components/NavBar/NavBar';
 
 function App() {
   // start dispatch for games and topGames

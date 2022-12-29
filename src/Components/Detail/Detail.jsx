@@ -48,7 +48,9 @@ export default function Detail() {
       </div>
 
       <div className={styles.botonJugar}>
-        <a href={detalle.game_url}>Jugar</a>
+        <a href={detalle.game_url}>
+          <button>Jugar</button>
+        </a>
       </div>
 
       <div className={styles.descripcion}>
