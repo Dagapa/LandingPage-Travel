@@ -1,49 +1,97 @@
-.parent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 10vh);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
 body {
   background-color: #323232;
 }
 
+.contenedor {
+  display: grid;
+  grid-template-columns: 20%-40px 60% 20%-40px;
+  grid-template-rows: repeat(30, 40px);
+  column-gap: 40px;
+}
+
 .cartelera {
-  grid-area: 1 / 1 / 5 / 6;
+  grid-column: 1 /4;
+  grid-row: 1 / 15;
 }
+
 .foto {
-  grid-area: 7 / 1 / 10 / 2;
-  padding: 20px;
-  /* background-color: darkgreen; */
+  grid-column: 1/1;
+  grid-row: 13/ 17;
+  padding-left: 36px;
 }
-.sistema {
-  grid-area: 8 / 4 / 11 / 5;
-  padding: 20px;
-  /* background-color: yellow; */
+.fotoP {
+  width: 100%;
+  border-radius: 46px;
+  overflow: hidden;
 }
-.botonJugar {
-  grid-area: 10 / 1 / 11 / 2;
-  padding: 20px;
-  /*background-color: red; */
-}
-.div5 {
-  grid-area: 9 / 2 / 10 / 4;
-  padding: 20px;
-  /* background-color: salmon; */
-}
-.descripcion {
-  grid-area: 10 / 2 / 40 / 4;
-  padding: 20px;
-  /* background-color: orange; */
-}
+
 .titulo {
-  grid-area: 7 / 2 / 8 / 3;
-  padding: 20px;
-  /* background-color: aqua; */
+  grid-column: 2 /2;
+  grid-row: 14/ 15;
+  color: white;
+  font-family: Poppins-Regular;
+  font-style: normal;
+  font-weight: 400;
 }
-.div8 {
-  grid-area: 8 / 2 / 9 / 4;
-  padding: 20px;
-  /* background-color: purple; */
+
+.botonJugar {
+  grid-column: 1 / 1;
+  grid-row: 19 / 19;
+}
+
+.estrellas {
+  grid-column: 1 / 1;
+  grid-row: 20 / 21;
+  display: flex;
+  justify-content: space-around;
+}
+
+.opiniones {
+  grid-column: 1 /1;
+  grid-row: 21 / 24;
+}
+
+.descripcion {
+  grid-column: 2 /2;
+  grid-row: 18 / 23;
+}
+
+.sistema {
+  grid-column: 3 / 3;
+  grid-row: 15 / 20;
+}
+
+.developer {
+  grid-column: 2 /2;
+  grid-row: 16 / 17;
+}
+
+.lanzamiento {
+  grid-column: 2 /2;
+  grid-row: 15 / 16;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 200px;
+}
+
+.gener {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: rgba(170, 164, 164, 0.44);
+  box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  transition: all 200ms;
+  width: fit-content;
+}
+.gener p {
+  color: white;
+  padding: 8px;
+  font-size: 0.9rem;
+  font-family: Poppins-Regular;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.125em;
 }

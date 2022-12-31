@@ -1,9 +1,9 @@
 .cartelera {
   width: 100%;
+  height: 100%;
 }
 
 .imagenes {
   width: 100%;
-  height: 550px;
-  background-size: cover;
+  height: 100%;
 }

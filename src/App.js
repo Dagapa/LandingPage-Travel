@@ -9,6 +9,8 @@ import TopGames from './Components/TopGames/TopGames.jsx';
 import Detail from './Components/Detail/Detail.jsx';
 import Landing from './Components/Landing/Landing';
 import CardsGames from './Components/CardsGames/CardsGames.jsx';
+import NavBar from './Components/NavBar/NavBar.jsx';
+
 // animations Scroll
 import AOS from 'aos';
 import 'aos/dist/aos.css';
