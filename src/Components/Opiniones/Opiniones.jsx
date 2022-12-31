@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const Opiniones = ({ coment, fav, ratio, numRatio }) => {
-  console.log(fav);
   return (
     <div className='contenedor'>
       <span className='comentarios'>{`Comentarios: ${coment}\n`}</span>

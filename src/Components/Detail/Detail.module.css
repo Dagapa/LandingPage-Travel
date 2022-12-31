@@ -4,9 +4,9 @@ body {
 
 .contenedor {
   display: grid;
-  grid-template-columns: 20%-40px 60% 20%-40px;
+  grid-template-columns: 20% 56% 20%;
   grid-template-rows: repeat(30, 40px);
-  column-gap: 40px;
+  column-gap: 2%;
 }
 
 .cartelera {
@@ -21,7 +21,7 @@ body {
 }
 .fotoP {
   width: 100%;
-  border-radius: 46px;
+  border-radius: 36px;
   overflow: hidden;
 }
 
@@ -36,7 +36,33 @@ body {
 
 .botonJugar {
   grid-column: 1 / 1;
-  grid-row: 19 / 19;
+  grid-row: 16 / 18;
+  padding-left: 36px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.enlace {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    92.84deg,
+    #54e38e 9.95%,
+    rgba(51, 255, 0, 0) 170.97%,
+    #41c7af 170.97%
+  );
+  border-radius: 12px;
+  font-family: Poppins-Regular;
+}
+
+.btnJugar {
+  color: white;
+  font-size: 25px;
+}
+.icono {
+  color: white;
 }
 
 .estrellas {

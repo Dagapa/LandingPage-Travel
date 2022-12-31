@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react';
 import Cartelera from '../Cartelera/Cartelera.jsx';
 import styles from './Detail.module.css';
 import Loading from '../Loading/Loading.jsx';
-import Categories from '../Categories/Categories.jsx';
 import GameRank from '../GameRank/GameRank.jsx';
 import Opiniones from '../Opiniones/Opiniones.jsx';
 import BtnFavoritos from '../BtnFavoritos/BtnFavoritos.jsx';
 
-import { BsCpu } from 'react-icons/bs';
+import { BsCpu, BsPlay } from 'react-icons/bs';
 import { FaMemory } from 'react-icons/fa';
 import { AiFillWindows } from 'react-icons/ai';
 import { FiHardDrive } from 'react-icons/fi';
-import { GiAbstract092, GiAbstract071, GiAbstract057 } from 'react-icons/gi';
+import { GiAbstract071 } from 'react-icons/gi';
+import { CiPlay1 } from 'react-icons/ci';
 
 export default function Detail() {
   const dispatch = useDispatch();
@@ -65,10 +65,12 @@ export default function Detail() {
       </div>
 
       <div className={styles.botonJugar}>
-        <a href={detalle.game_url}>
-          <button>Jugar</button>
+        <a href={detalle.game_url} target='_blanck' className={styles.enlace}>
+          <BsPlay size={35} className={styles.icono} />
+          <p className={styles.btnJugar}>Jugar</p>
         </a>
       </div>
+
       <div className={styles.estrellas}>
         <GameRank />
         <BtnFavoritos />
@@ -84,22 +86,28 @@ export default function Detail() {
 
       <div className={styles.sistema}>
         Requisitos del sistema:
+        <br />
+        <br />
         <div className='Procesador'>
           <BsCpu size={25} />
           {`Procesador: ${detalle.minimum_system_requirements.processor}`}
         </div>
+        <br />
         <div className='Graficos'>
           <GiAbstract071 size={25} />
           {`Graficos: ${detalle.minimum_system_requirements.graphics}`}
         </div>
+        <br />
         <div className='RAM'>
           <FaMemory size={25} />
           {`RAM: ${detalle.minimum_system_requirements.memory}`}
         </div>
+        <br />
         <div className='Sistema'>
           <AiFillWindows size={25} />
           {`Sistema: ${detalle.minimum_system_requirements.os}`}
         </div>
+        <br />
         <div className='Memoria'>
           <FiHardDrive size={25} />
           {`Memoria: ${detalle.minimum_system_requirements.storage}`}
