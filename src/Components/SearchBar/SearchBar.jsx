@@ -119,7 +119,10 @@ export default function SearchBar() {
           </button>
         </div>
       </div>
+      <div className={Styles.versionDesktop}>
       {Desplegado && <Categories cartas={placeholder} />}
+      </div>
+     
     </div>
   );
 }

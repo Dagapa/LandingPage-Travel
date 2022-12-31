@@ -60,6 +60,9 @@
   outline: 0;
 }
 @media (max-width: 768px) {
+  .versionDesktop{
+    display: none;
+  }
   .Contenedor {
     border-radius: 0px 0px 0px 0px;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
