@@ -35,11 +35,10 @@ const rootReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         renderGames: payload,
-      }
-      default:
+      };
+    default:
       return {
-        games: [],
-        topGames: [],
+        ...state,
       };
   }
 };
