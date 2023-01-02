@@ -4,7 +4,53 @@ import Styles from './SearchBar.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../../Redux/actions/actions';
 
-const placeholder = ['hola', 'genero1', 'moba', 'shooter'];
+const placeholder = [
+  'mmorpg',
+  'shooter',
+  'strategy',
+  'moba',
+  'racing',
+  'sports',
+  'social',
+  'sandbox',
+  'open-world',
+  'survival',
+  'pvp',
+  'pve',
+  'pixel',
+  'voxel',
+  'zombie',
+  'turn-based',
+  'first-person',
+  'third-Person',
+  'top-down',
+  'tank',
+  'space',
+  'sailing',
+  'side-scroller',
+  'superhero',
+  'permadeath',
+  'card',
+  'battle-royale',
+  'mmo',
+  'mmofps',
+  'mmotps',
+  '3d',
+  '2d',
+  'anime',
+  'fantasy',
+  'sci-fi',
+  'fighting',
+  'action-rpg',
+  'action',
+  'military',
+  'martial-arts',
+  'flight',
+  'low-spec',
+  'tower-defense',
+  'horror',
+  'mmorts',
+];
 
 export default function SearchBar() {
   const [Desplegado, setDesplegado] = useState(false);
@@ -21,7 +67,6 @@ export default function SearchBar() {
   const estado = useSelector((state) => state.games);
   const Buscar = () => {
     const encontrados = [];
-
     estado.forEach((element) => {
       if (element.title.toLowerCase().includes(input)) {
         encontrados.push(element);
@@ -41,6 +86,15 @@ export default function SearchBar() {
         <button onClick={Desplegar} className={Styles.Categoria}>
           Categoria
         </button>
+        <div className={Styles.divCategorias}>
+          <div className={Styles.textoVerMas}>
+            <p>Categorias</p>
+          </div>
+          <div className={Styles.containerCategories}>
+            <Categories cartas={placeholder} />
+          </div>
+        </div>
+
         <div className={Styles.Search}>
           <input
             className={Styles.input}
@@ -49,6 +103,11 @@ export default function SearchBar() {
             placeholder='Buscar Juegos...'
             onChange={(event) => {
               setInput(event.target.value);
+            }}
+            onKeyDown={(evento) => {
+              if (evento.key === 'Enter') {
+                Buscar();
+              }
             }}
           />
           <button className={Styles.buscar} onClick={Buscar}>

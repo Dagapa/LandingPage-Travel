@@ -44,6 +44,7 @@ export default function CardsGames() {
       {state.renderizar.map((game) => {
         return (
           <CardGame
+            open={undefined}
             key={game.id}
             id={game.id}
             img={game.thumbnail}

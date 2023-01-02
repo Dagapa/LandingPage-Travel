@@ -1,12 +1,13 @@
 // css
 import './App.css';
+
 // Routing
 import { Routes, Route } from 'react-router-dom';
 // Components
 import About from './Components/About/About.jsx';
 import TopGames from './Components/TopGames/TopGames.jsx';
-import Detail from './Components/Detail/Detail.jsx';
 import Landing from './Components/Landing/Landing';
+import Detail from './Components/Detail/Detail.jsx';
 // animations Scroll
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,6 +16,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 // actions
 import { getGames, getTopGames } from './Redux/actions/actions';
+//import { NavBar } from './Components/NavBar/NavBar';
 
 function App() {
   const dispatch = useDispatch();

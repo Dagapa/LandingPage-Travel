@@ -77,5 +77,5 @@ CardGame.propTypes = {
   genre: PropTypes.string.isRequired,
   position: PropTypes.number,
   ruta: PropTypes.string.isRequired,
-  open: PropTypes.bool.isRequired,
+  open: PropTypes.bool,
 };
