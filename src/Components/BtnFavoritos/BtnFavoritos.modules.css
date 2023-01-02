@@ -1,0 +1,8 @@
+input[type='radio'] {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  transition: color 100ms;
+}

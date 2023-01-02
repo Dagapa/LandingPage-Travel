@@ -1,4 +1,5 @@
 // * importacion de los types.js
+
 import {
   GET_GAMES,
   GET_TOPGAMES,
