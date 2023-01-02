@@ -33,12 +33,11 @@ const rootReducer = (state = initialState, { type, payload }) => {
     case RENDER_GAMES:
       return {
         ...state,
-        renderGames: payload, // ! error de propiedad
+        renderGames: payload,
       };
     default:
       return {
-        games: [],
-        topGames: [],
+        ...state,
       };
   }
 };
