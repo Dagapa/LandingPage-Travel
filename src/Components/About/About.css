@@ -1,0 +1,108 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .presentation {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: 10% 40%;
+    transform-style: preserve-3d;
+    background-color: #051120;
+  }
+
+  .presentation img {
+    width: 400px;
+    animation: logo infinite 5s;
+  }
+
+  @keyframes logo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .presentation img{
+    display: none;
+  }
+  .presentation {
+    background-image: url('../../assets/svg/wallpaper_abaout.jpg');
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: 10% 40%;
+  }
+}
+
+.contenedorInfo {
+  padding-top: 150px;
+  background-image: url('../../assets/svg/background.png');
+  width: 100%;
+  position: relative;
+  top: -111px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.cardProgramador {
+  width: 250px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 11px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 28px;
+}
+
+.imgaProgramador {
+  width: 220px;
+  position: relative;
+  top: -50px;
+}
+
+.cardProgramador h1 {
+  width: 100%;
+  height: 10px;
+  text-align: center;
+  font-family: Poppins-Regular;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 36px;
+  color: #313131;
+}
+
+.cardProgramador h2 {
+  width: 100%;
+  text-align: center;
+  font-family: Poppins-Medium;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 36px;
+  color: #313131;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.redes img {
+  width: 30px;
+}

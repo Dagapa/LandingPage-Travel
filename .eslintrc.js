@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     'no-unused-vars': 'warn',
     'spaced-comment': 'off',
+    'object-shorthand': 'off',
   },
 };

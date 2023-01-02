@@ -1,5 +1,58 @@
 @media screen and (min-width: 320px) and (max-width: 768px) {
+  .rakingMobile {
+    position: absolute;
+    top: -20px;
+    right: -32px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+  }
+
+  .positionMobile {
+    width: 100%;
+    position: absolute;
+    right: -16px;
+    bottom: 0px;
+    height: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(62, 62, 62, 0.5);
+    backdrop-filter: blur(3px);
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .positionMobile p {
+    position: relative;
+    left: 11px;
+    bottom: 14px;
+    width: 25px;
+    height: 22px;
+    color: white;
+    font-family: Poppins-semiBold;
+  }
+
+  .rakingDesktop {
+    position: absolute;
+    top: -18px;
+    right: -36px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    animation: alternate infinite animation 1s;
+  }
+
+  @keyframes animation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
   .cardContainer {
+    /* width: 90%; 328.5 
+    height: 139px;
+    */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -10,15 +63,21 @@
   }
 
   .cardContainer a img {
-    width: 100%;
-    min-width: 250px;
-    max-width: 500px;
+    /* ARREGLA PADDING  */
+    width: 320px;
+    height: 180px;
     background-size: cover;
     border-radius: 10px;
     transform: translateZ(10px);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: all 200ms;
+  }
+
+  .cardContainer a {
+    width: 90%;
+    min-width: 250px;
+    max-width: 500px;
   }
 
   .infoContainer,
@@ -29,6 +88,13 @@
 }
 
 @media screen and (min-width: 769px) {
+  .rakingDesktop,
+  .rakingMobile,
+  .positionMobile {
+    display: none;
+    visibility: none;
+  }
+
   .cardContainer {
     width: 80%;
     max-width: 900px;
