@@ -13,7 +13,7 @@ import './CardsGames.css';
 class CardsGames extends Component {
   state = { isLoading: true, gamesRender: [] };
 
-  // 
+  //
   UNSAFE_componentWillMount() {
     if (this.props.allGames.length > 0) this.setState({ isLoading: false });
   }
@@ -38,8 +38,6 @@ class CardsGames extends Component {
     let gamesShow;
     if (this.state.gamesRender.length > 0) gamesShow = this.state.gamesRender;
     else gamesShow = this.props.allGames.slice(1, 15);
-
-    console.log('💻 -> CardsGames -> render -> gamesShow', gamesShow);
 
     return (
       <div className='containerGames'>
