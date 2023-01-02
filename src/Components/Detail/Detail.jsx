@@ -9,12 +9,12 @@ import GameRank from '../GameRank/GameRank.jsx';
 import Opiniones from '../Opiniones/Opiniones.jsx';
 import BtnFavoritos from '../BtnFavoritos/BtnFavoritos.jsx';
 
-import { BsCpu, BsPlay } from 'react-icons/bs';
-import { FaMemory } from 'react-icons/fa';
-import { AiFillWindows } from 'react-icons/ai';
-import { FiHardDrive } from 'react-icons/fi';
-import { GiAbstract071 } from 'react-icons/gi';
-import { CiPlay1 } from 'react-icons/ci';
+import { BsPlay } from 'react-icons/bs';
+import iconoGraf from '../../assets/svg/Gpugraficos.png';
+import iconoMemo from '../../assets/svg/Ssdmemori.png';
+import iconoRAM from '../../assets/svg/RamRAM.png';
+import iconoSist from '../../assets/svg/Windowssistm.png';
+import iconoProces from '../../assets/svg/Chipproces.png';
 
 export default function Detail() {
   const dispatch = useDispatch();
@@ -85,32 +85,33 @@ export default function Detail() {
       </div>
 
       <div className={styles.sistema}>
-        Requisitos del sistema:
-        <br />
-        <br />
-        <div className='Procesador'>
-          <BsCpu size={25} />
-          {`Procesador: ${detalle.minimum_system_requirements.processor}`}
-        </div>
-        <br />
-        <div className='Graficos'>
-          <GiAbstract071 size={25} />
-          {`Graficos: ${detalle.minimum_system_requirements.graphics}`}
-        </div>
-        <br />
-        <div className='RAM'>
-          <FaMemory size={25} />
-          {`RAM: ${detalle.minimum_system_requirements.memory}`}
-        </div>
-        <br />
-        <div className='Sistema'>
-          <AiFillWindows size={25} />
-          {`Sistema: ${detalle.minimum_system_requirements.os}`}
-        </div>
-        <br />
-        <div className='Memoria'>
-          <FiHardDrive size={25} />
-          {`Memoria: ${detalle.minimum_system_requirements.storage}`}
+        <span className={styles.requisitos}>Requisitos del sistema:</span>
+
+        <div>
+          <img src={iconoProces} className={styles.iconos} id={styles.Proces} />
+          <div className={styles.Procesador}>
+            {`Procesador: ${detalle.minimum_system_requirements.processor}`}
+          </div>
+
+          <img src={iconoGraf} className={styles.iconos} id={styles.Grafic} />
+          <div className={styles.Graficos}>
+            {`Graficos: ${detalle.minimum_system_requirements.graphics}`}
+          </div>
+
+          <img src={iconoRAM} className={styles.iconos} id={styles.RAM} />
+          <div className={styles.RAM}>
+            {`RAM: ${detalle.minimum_system_requirements.memory}`}
+          </div>
+
+          <img src={iconoSist} className={styles.iconos} id={styles.Sistm} />
+          <div className={styles.Sistema}>
+            {`Sistema: ${detalle.minimum_system_requirements.os}`}
+          </div>
+
+          <img src={iconoMemo} className={styles.iconos} id={styles.Memo} />
+          <div className={styles.Memoria}>
+            {`Memoria: ${detalle.minimum_system_requirements.storage}`}
+          </div>
         </div>
       </div>
     </div>
