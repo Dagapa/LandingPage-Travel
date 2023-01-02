@@ -111,6 +111,7 @@
     overflow-x: scroll;
   }
 
+@media screen and (min-width: 769px) {
   .containerGamesTop {
     width: 100%;
     background-color: #dcdcdc;
@@ -131,4 +132,5 @@
     display: none;
     visibility: none;
   }
+}
 }

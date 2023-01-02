@@ -42,7 +42,7 @@ export default function Pagination({ totalPages, currentPages, ruta }) {
       <Link
         to={
           ruta === 'cardsgames'
-            ? `/home/${state.btn1}`
+            ? `/${state.btn1}`
             : `/topgames/${state.btn1}`
         }
       >
@@ -51,7 +51,7 @@ export default function Pagination({ totalPages, currentPages, ruta }) {
       <Link
         to={
           ruta === 'cardsgames'
-            ? `/home/${state.center}`
+            ? `/${state.center}`
             : `/topgames/${state.center}`
         }
       >
@@ -61,7 +61,7 @@ export default function Pagination({ totalPages, currentPages, ruta }) {
       <Link
         to={
           ruta === 'cardsgames'
-            ? `/home/${state.btn2}`
+            ? `/${state.btn2}`
             : `/topgames/${state.btn2}`
         }
       >

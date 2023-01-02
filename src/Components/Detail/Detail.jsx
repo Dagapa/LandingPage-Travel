@@ -24,7 +24,7 @@ export default function Detail() {
     return state.detail;
   });
   useEffect(() => {
-    if (!detalle) dispatch(actions.getDetail(id));
+    if (detalle.length===undefined) dispatch(actions.getDetail(id));
     if (detalle?.screenshots) {
       setFuturaInfo(false);
     }

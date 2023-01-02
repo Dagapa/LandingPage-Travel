@@ -35,10 +35,11 @@ function App() {
   return (
     <div className='App'>
       <Routes>
+        <Route exact path='/Detail/:id' element={<Detail />} />
+        <Route exact path='/nav' element={<NavBar />} />
         <Route exact path='/about' element={<About />} />
         <Route exact path='/topgames/:id' element={<TopGames />} />
-        <Route exact path='/Detail/:id' element={<Detail />} />
-        <Route path='/home/:id' element={<Landing />} />
+        <Route exact path='/:id' element={<Landing />} />
       </Routes>
     </div>
   );
