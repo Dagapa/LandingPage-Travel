@@ -6,7 +6,6 @@ import { Routes, Route } from 'react-router-dom';
 import About from './Components/About/About.jsx';
 import TopGames from './Components/TopGames/TopGames.jsx';
 import Detail from './Components/Detail/Detail.jsx';
-import CardsGames from './Components/CardsGames/CardsGames.jsx';
 import Landing from './Components/Landing/Landing';
 // animations Scroll
 import AOS from 'aos';
@@ -18,38 +17,23 @@ import { useDispatch } from 'react-redux';
 import { getGames, getTopGames } from './Redux/actions/actions';
 
 function App() {
-  // start dispatch for games and topGames
   const dispatch = useDispatch();
-  const getAllGames = () => {
-    dispatch(getGames(dispatch));
-    dispatch(getTopGames(dispatch));
-  };
-
   // INICIO AOS DE FORMA GLOBAL y hago la peticion de los juegos
   useEffect(() => {
     AOS.init({
       offset: 130,
     });
-    getAllGames();
+    dispatch(getGames(dispatch));
+    dispatch(getTopGames(dispatch));
   }, []);
 
   return (
     <div className='App'>
       <Routes>
         <Route exact path='/about' element={<About />} />
-        <Route exact path='/topgames' element={<TopGames />} />
+        <Route exact path='/topgames/:id' element={<TopGames />} />
         <Route exact path='/Detail/:id' element={<Detail />} />
-        <Route
-          exact
-          path='/pruebaGamesTemp' // TODO: uso temporal
-          element={<CardsGames />}
-        />
-        <Route
-          exact
-          path='/pruebaTopsGamesTemp' // TODO: uso temporal
-          element={<TopGames />}
-        />
-        <Route exact path='/' element={<Landing />} />
+        <Route path='/home/:id' element={<Landing />} />
       </Routes>
     </div>
   );
